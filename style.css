@@ -49,15 +49,44 @@ p {
   left: 0;
   color: var(--color2);
   background: var(--color1);
-  width: 18%;
-  height: 110%;
+  width: 12rem;
+  height: 100%;
   padding: 0;
+  transition: 0.5s ease-in-out;
 }
 
-.sidebar::before {
-  content:"";
+/* Gestion des icones */
+i {
+  scale: 5; 
 }
 
+/* Gestion de l'icône Xmark: */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1rem; /* Ajuste la taille de l'icône */
+  color: var(--color1);
+  background-color: var(--color2);
+  position: absolute;
+  top:2rem;
+  left:14rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.2s ease-in-out;
+}
+
+/* Gestion de l'icône Bars: */
+.open-btn {
+  background: none;
+  border: none;
+  font-size: fa-xs; /* Ajuste la taille de l'icône */
+  color: var(--color1);
+  background-color: var(--color2);
+  position: absolute;
+  top:2.5rem;
+  left:14rem;
+  cursor: pointer;
+}
 
 ul{
   padding: 0.5rem 0.5rem;
@@ -65,13 +94,8 @@ ul{
 
 li {
   list-style: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2rem;
   line-height: 3.5rem;
 }
 
-i {
-  scale: 5;
-  background: var(--color2);
-  color: var(--color1);
-}
