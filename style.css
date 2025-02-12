@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mystery+Quest&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL */
+
+/* Palette de couleurs: */
+:root {
+  /* Couleur de la font */
+  --color1: #09F7BB;
+ /* Couleur du background */
+  --color2: #383838;
+}
+
+* {
+  margin: 0px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  font-style: normal;;
+}
+
+html {
+  scroll-behavior: smooth; /* Effet scroll doux: */
+}
+
+body {
+  background: #383838;
+  color: #09F7BB;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  padding-bottom: 30px;
+
+}
+p {
+  text-align: justify;
+}
