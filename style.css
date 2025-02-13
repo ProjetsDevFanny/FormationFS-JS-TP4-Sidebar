@@ -30,6 +30,11 @@ body {
   color: var(--color1);
 }
 
+main {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
 h1 {
   text-align: center;
   font-size: 4rem;
@@ -46,13 +51,13 @@ p {
 .sidebar {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -12rem;
   color: var(--color2);
   background: var(--color1);
   width: 12rem;
   height: 100%;
   padding: 0;
-  transition: 0.5s ease-in-out;
+  transition: 0.7s ease;
 }
 
 /* Gestion des icones */
@@ -71,9 +76,8 @@ i {
   top:2rem;
   left:14rem;
   cursor: pointer;
-  z-index: 1;
-  transition: 0.2s ease-in-out;
-}
+  visibility: hidden;
+  }
 
 /* Gestion de l'icône Bars: */
 .open-btn {
@@ -86,10 +90,11 @@ i {
   top:2.5rem;
   left:14rem;
   cursor: pointer;
+  z-index: 1;
 }
 
 ul{
-  padding: 0.5rem 0.5rem;
+  padding: 0;
 }
 
 li {
@@ -97,5 +102,18 @@ li {
   font-weight: 500;
   font-size: 2rem;
   line-height: 3.5rem;
+  padding-left: 0.5rem;
 }
+
+li:hover {
+  background-color: rgb(36, 35, 35);
+  color: aliceblue;
+}
+
+
+
+
+
+
+
 
