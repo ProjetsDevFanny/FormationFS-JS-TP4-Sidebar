@@ -32,10 +32,11 @@ body {
 
 main {
   opacity: 1;
-  transition: 0.5s ease;
+  transition: 1s ease;
 }
 
 h1 {
+  text-transform: uppercase; /* texte en majuscule */
   text-align: center;
   font-size: 4rem;
   font-weight: 600;
@@ -50,47 +51,63 @@ p {
 
 .sidebar {
   position: absolute;
-  top: 0;
-  left: -12rem;
+  width: 230px;
+  height: 100%;
   color: var(--color2);
   background: var(--color1);
-  width: 12rem;
-  height: 100%;
-  padding: 0;
-  transition: 0.7s ease;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-out;
+  z-index: 4;
+  transform:translateX(-230px);
 }
 
-/* Gestion des icones */
-i {
-  scale: 5; 
+.sidebar--deployed {
+  transform: translateX(0);
 }
 
-/* Gestion de l'icône Xmark: */
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 1rem; /* Ajuste la taille de l'icône */
-  color: var(--color1);
-  background-color: var(--color2);
+/* Div hamburger */
+.toggle-btn {
   position: absolute;
-  top:2rem;
-  left:14rem;
+  top: 30px;
+  left: 240px;
   cursor: pointer;
-  visibility: hidden;
-  }
+  height: 50px;
+  width: 50px;
+}
 
-/* Gestion de l'icône Bars: */
-.open-btn {
-  background: none;
-  border: none;
-  font-size: fa-xs; /* Ajuste la taille de l'icône */
-  color: var(--color1);
-  background-color: var(--color2);
-  position: absolute;
-  top:2.5rem;
-  left:14rem;
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #09fbba;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+
+.toggle-btn.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.toggle-btn.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-btn.open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 20px;
+}
+
+.content {
   cursor: pointer;
-  z-index: 1;
+}
+
+.content.opacity {
+  opacity: 0.3;
 }
 
 ul{
@@ -102,7 +119,7 @@ li {
   font-weight: 500;
   font-size: 2rem;
   line-height: 3.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.7rem;
 }
 
 li:hover {

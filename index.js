@@ -1,30 +1,29 @@
+// Créer un événement au click sur le hamburger menu pour sortir la sidebar, ranger la sidebar si on reclick dessus
 
-// Au clic sur l'icone "bars", la sidebar apparaît:
+// Ranger la sidebar si on click sur le contenu principal
 
-openBtn.addEventListener("click", function () {
-  sidebar.style.transform = "translateX(12rem)";
-  openBtn.style.visibility = "hidden";
-  closeBtn.style.visibility = "visible";
-  main.style.opacity = "0.4";
+// BONUS
+// Créer en css l'hamburger menu qui se transforme en croix
+
+// Aide
+// Priorités en CSS : !important > id > classe > baliseHtml
+
+const sidebar = document.querySelector(".sidebar");
+const btn = document.getElementById("btn");
+const content = document.querySelector(".content");
+
+btn.onclick = () => {
+  // Apparition/disparition sidebar:
+  sidebar.classList.toggle("sidebar--deployed");
+  // Transformation du bouton (burger/croix):
+  btn.classList.toggle("open");
+  // Opacity du fond quand on ouvre la sidebar:
+  content.classList.toggle("opacity");
+};
+
+// Click sur le fond pour rentrer la sidebar:
+content.addEventListener("click", () => {
+  sidebar.classList.remove("sidebar--deployed");
+  btn.classList.remove("open");
+  content.classList.remove("opacity");
 });
-
-
-// Au clic sur la croix, la sidebar se cache:
-
-closeBtn.addEventListener("click", function () {
-  sidebar.style.transform = "translateX(0rem)";
-  closeBtn.style.visibility = "hidden";
-  openBtn.style.visibility = "visible";
-  main.style.opacity = "1";
-});
-
-// Au click sur le main, la sidebar se cache
-
-main.addEventListener("click", function() {
-  sidebar.style.transform = "translateX(0rem)";
-  closeBtn.style.visibility = "hidden";
-  openBtn.style.visibility = "visible";
-  main.style.opacity = "1";
-});
-
-
